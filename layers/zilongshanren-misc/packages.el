@@ -363,6 +363,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
       (spacemacs/set-leader-keys
         ;; helm-ag marks
         "s`"  'helm-ag-pop-stack
+        "si"  'helm-imenu
         ;; opened buffers scope
         "sb"  'spacemacs/helm-buffers-smart-do-search
         "sB"  'spacemacs/helm-buffers-smart-do-search-region-or-symbol
@@ -396,7 +397,8 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
         "skp" 'spacemacs/helm-project-do-ack
         "skP" 'spacemacs/helm-project-do-ack-region-or-symbol
         "stp" 'spacemacs/helm-project-do-pt
-        "stP" 'spacemacs/helm-project-do-pt-region-or-symbol))
+        "stP" 'spacemacs/helm-project-do-pt-region-or-symbol
+        ))
     :config
     (progn
       (advice-add 'helm-ag--save-results :after 'spacemacs//gne-init-helm-ag)
@@ -555,7 +557,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
   (use-package helm-github-stars
     :commands (helm-github-stars)
     :init
-    (setq helm-github-stars-username "zilongshanren")))
+    (setq helm-github-stars-username "673298622@qq.com")))
 
 
 

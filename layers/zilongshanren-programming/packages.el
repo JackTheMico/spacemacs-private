@@ -32,7 +32,7 @@
         lua-mode
         (cc-mode :location built-in)
         ;; flycheck-clojure
-        etags-select
+        ;; etags-select
         (python :location built-in)
         (emacs-lisp :location built-in)
         ;; clojure-mode
@@ -210,7 +210,8 @@
     :defer t))
 
 (defun zilongshanren-programming/init-flycheck-package ()
-  (use-package flycheck-package))
+  (use-package flycheck-package
+    ))
 
 (defun zilongshanren-programming/init-lispy ()
   (use-package lispy
@@ -266,6 +267,7 @@
     (progn
       (setq flycheck-display-errors-delay 0.9)
       (setq flycheck-idle-change-delay 2.0)
+      (setq flycheck-python-pylint-executable "/usr/bin/pylint3.6")
       )))
 
 (defun zilongshanren-programming/post-init-eldoc ()
