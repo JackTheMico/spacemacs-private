@@ -21,6 +21,7 @@
 (global-set-key (kbd "s-/") 'hippie-expand)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "C-c s") 'youdao-dictionary-search)
 (define-key global-map (kbd "<f9>") 'org-capture)
 (define-key global-map (kbd "C-c t") 'org-capture)
 (define-key global-map (kbd "<f8>") 'zilongshanren/show-current-buffer-major-mode)
@@ -157,6 +158,7 @@
 (spacemacs/set-leader-keys "ols" 'zilongshanren/save-my-layout)
 (spacemacs/set-leader-keys "ob" 'popwin:display-last-buffer)
 (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
+(spacemacs/set-leader-keys "os" 'youdao-dictionary-search)
 (spacemacs/set-leader-keys "bM" 'spacemacs/switch-to-messages-buffer)
 
 (bind-key* "s-p" 'find-file-in-project)
