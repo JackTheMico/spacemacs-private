@@ -268,6 +268,7 @@
       (setq flycheck-display-errors-delay 0.9)
       (setq flycheck-idle-change-delay 2.0)
       (setq flycheck-python-pylint-executable "/usr/bin/pylint3.6")
+      (setq-default flycheck-checker 'python-pylint)
       )))
 
 (defun zilongshanren-programming/post-init-eldoc ()
