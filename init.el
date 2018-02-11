@@ -171,8 +171,8 @@ values."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
-                                (projects . 7))
+   dotspacemacs-startup-lists '((recents . 15)
+                                (projects . 10))
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -180,7 +180,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs
+   dotspacemacs-themes '(
+                         spacemacs-dark
                          solarized-dark
                          solarized-light
                          )
@@ -441,8 +442,6 @@ values."
   ;; 添加python启动路径及参数
   (setq python-shell-interpreter "/usr/local/bin/ipython3")
   (setq pippel-python-command "/usr/bin/python3.6")
-  ;; 启动flycheck
-  (global-flycheck-mode t)
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
