@@ -20,15 +20,15 @@
         cmake-font-lock
         cmake-mode
         flycheck
-        nodejs-repl
-        (nodejs-repl-eval :location local)
+        ;; nodejs-repl
+        ;; (nodejs-repl-eval :location local)
         js2-mode
         js2-refactor
         json-mode
         racket-mode
         yasnippet
         web-mode
-        js-doc
+        ;; js-doc
         lua-mode
         (cc-mode :location built-in)
         ;; flycheck-clojure

@@ -14,6 +14,7 @@
         helm-github-stars
         helm
         helm-ag
+        helm-dash
         projectile
         prodigy
         find-file-in-project
@@ -553,13 +554,36 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
       )
     ))
 
+(defun python3-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Python 3"))
+  (setq-local helm-dash-docsets '("Scrapy"))
+  )
+
+(defun zilongshanren-misc/init-helm-dash ()
+  (use-package helm-dash
+    :defer t
+    :init
+    (progn
+      (setq helm-dash-docsets-path "~/.spacemacs.d/.docsets")
+      (setq helm-dash-browser-func 'eww)
+      (add-hook 'python-mode-hook 'python3-doc)
+      (spacemacs/set-leader-keys
+        "dh" 'helm-dash-at-point
+        "dH" 'helm-dash)
+      )))
+
+
 (defun zilongshanren-misc/init-helm-github-stars ()
   (use-package helm-github-stars
     :commands (helm-github-stars)
     :init
     (setq helm-github-stars-username "673298622@qq.com")))
 
-
+(defun zilongshanren-misc/post-init-dash ()
+  (with-eval-after-load 'dash
+    ()
+      ))
 
 
 (defun zilongshanren-misc/post-init-fcitx ()
@@ -723,15 +747,23 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     (define-key evil-normal-state-map (kbd "M-y") 'counsel-yank-pop)
 
     ;; (define-key evil-insert-state-map "\C-e" 'end-of-line)
-    ;; (define-key evil-insert-state-map "\C-n" 'next-line)
+    (define-key evil-insert-state-map "\C-j" 'next-line)
+    (define-key evil-insert-state-map "\C-k" 'previous-line)
+    (define-key evil-insert-state-map "\C-h" 'backward-char)
+    (define-key evil-insert-state-map "\C-l" 'forward-char)
+    (define-key evil-insert-state-map "\C-f" 'forward-word)
+    (define-key evil-insert-state-map "\C-b" 'backward-word)
+    (define-key evil-insert-state-map "jk" 'evil-normal-state)
+
     ;; (define-key evil-insert-state-map "\C-k" 'kill-line)
-    (define-key evil-emacs-state-map (kbd "s-f") 'forward-word)
-    (define-key evil-insert-state-map (kbd "s-f") 'forward-word)
-    (define-key evil-emacs-state-map (kbd "s-b") 'backward-word)
-    (define-key evil-insert-state-map (kbd "s-b") 'backward-word)
+    ;; (define-key evil-emacs-state-map (kbd "s-f") 'forward-word)
+    ;; (define-key evil-insert-state-map (kbd "s-f") 'forward-word)
+    ;; (define-key evil-emacs-state-map (kbd "s-b") 'backward-workkD)
+    ;; (define-key evil-insert-state-map (kbd "s-b") 'backward-word)
 
     (spacemacs/set-leader-keys "bi" 'ibuffer)
     (define-key evil-ex-completion-map "\C-a" 'move-beginning-of-line)
+    (define-key evil-ex-completion-map "\C-e" 'end-of-line)
     (define-key evil-ex-completion-map "\C-b" 'backward-char)
     (define-key evil-ex-completion-map "\C-k" 'kill-line)
     (define-key minibuffer-local-map (kbd "C-w") 'evil-delete-backward-word)
@@ -781,7 +813,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     ;; (define-key input-decode-map [?\C-\[] (kbd "<C-[>"))
     ;; (bind-keys ("<C-[>" . evil-normal-state))
     ;; (setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
-    ;; (define-key evil-emacs-state-map [escape] 'evil-normal-state)
+    ;; (define-key evil-emacs-state-map [jk] 'evil-normal-state)
     ))
 
 (defun zilongshanren-misc/init-visual-regexp ()

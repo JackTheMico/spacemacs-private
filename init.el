@@ -67,11 +67,11 @@ values."
      (gtags :disabled-for clojure emacs-lisp javascript latex python shell-scripts)
      (shell :variables shell-default-shell 'eshell)
      ;; docker
-     latex
+     ;; latex
      deft
      markdown
      (org :variables org-want-todo-bindings t)
-     gpu
+     ;; gpu
      yaml
      react
      (python :variables
@@ -80,10 +80,10 @@ values."
      ;; ruby-on-rails
      lua
      html
-     javascript
-     (typescript :variables
-                typescript-fmt-on-save nil
-                typescript-fmt-tool 'typescript-formatter)
+     ;; javascript
+     ;; (typescript :variables
+                ;; typescript-fmt-on-save nil
+                ;; typescript-fmt-tool 'typescript-formatter)
      emacs-lisp
      (clojure :variables clojure-enable-fancify-symbols t)
      racket
