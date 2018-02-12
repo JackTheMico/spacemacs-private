@@ -565,7 +565,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     :defer t
     :init
     (progn
-      (setq helm-dash-docsets-path "~/.spacemacs.d/.docsets")
+      (setq helm-dash-docsets-path "~/.docsets")
       (setq helm-dash-browser-func 'eww)
       (add-hook 'python-mode-hook 'python3-doc)
       (spacemacs/set-leader-keys
