@@ -125,7 +125,7 @@
 (defun zilongshanren-programming/post-init-python ()
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
-  (setq python-shell-interpreter "python"))
+  (setq python-shell-interpreter "/usr/local/bin/ipython3"))
 
 (defun zilongshanren-programming/post-init-js-doc ()
   (setq js-doc-mail-address "guanghui8827@gmail.com"
@@ -168,8 +168,6 @@
                                      company-keywords
                                      company-etags)
                                     company-files company-dabbrev)))
-
-
 
 (defun zilongshanren-programming/post-init-yasnippet ()
   (progn

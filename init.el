@@ -440,7 +440,7 @@ values."
 
   ;; (add-hook 'text-mode-hook 'spacemacs/toggle-spelling-checking-on)
   ;; 添加python启动路径及参数
-  (setq python-shell-interpreter "/usr/local/bin/ipython3")
+  ;; (setq python-shell-interpreter "/usr/local/bin/ipython3")
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
