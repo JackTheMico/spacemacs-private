@@ -441,7 +441,6 @@ values."
   ;; (add-hook 'text-mode-hook 'spacemacs/toggle-spelling-checking-on)
   ;; 添加python启动路径及参数
   (setq python-shell-interpreter "/usr/local/bin/ipython3")
-  (setq pippel-python-command "/usr/bin/python3.6")
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))

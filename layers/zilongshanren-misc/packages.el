@@ -753,7 +753,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     (define-key evil-insert-state-map "\C-l" 'forward-char)
     (define-key evil-insert-state-map "\C-f" 'forward-word)
     (define-key evil-insert-state-map "\C-b" 'backward-word)
-    (define-key evil-insert-state-map "jk" 'evil-normal-state)
+    (define-key evil-insert-state-map "\C-q" 'evil-normal-state)
 
     ;; (define-key evil-insert-state-map "\C-k" 'kill-line)
     ;; (define-key evil-emacs-state-map (kbd "s-f") 'forward-word)
