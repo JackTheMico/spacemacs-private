@@ -556,8 +556,19 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
 
 (defun python3-doc ()
   (interactive)
-  (setq-local helm-dash-docsets '("Python 3"))
-  (setq-local helm-dash-docsets '("Scrapy"))
+  (setq-local helm-dash-docsets '("Python 3"
+                                  "Scrapy"
+                                  "iPython"
+                                  "Requests"
+                                  "Docker"
+                                  "pytest"
+                                  "Emacs Lisp"
+                                  "MySQL"
+                                  "Org_Mode"
+                                  "pyspark"
+                                  "Spacemacs"
+                                  "Tornado"
+                                  ))
   )
 
 (defun zilongshanren-misc/init-helm-dash ()
@@ -568,6 +579,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
       (setq helm-dash-docsets-path "~/.docsets")
       (setq helm-dash-browser-func 'eww)
       (add-hook 'python-mode-hook 'python3-doc)
+      (add-hook 'emacs-lisp-mode-hook 'python3-doc)
       (spacemacs/set-leader-keys
         "dh" 'helm-dash-at-point
         "dH" 'helm-dash)
