@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# contributor: dlw
+# name: newf
+# key: newf->
+# --
+
+# -*- coding:utf-8 -*-
+"""
+
+-------------------------------------------------
+
+   File Name:        $1.py
+
+   Description:      $2
+
+   Author:           Jack Deng
+
+   Date:             $3
+
+   Version:          v1.0
+
+   Lastmodified:     $3 by Jack Deng
+
+-------------------------------------------------
+
+"""

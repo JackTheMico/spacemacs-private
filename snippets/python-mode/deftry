@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# contributor: dlw
+# name: deftry
+# key: deftry
+# --
+def $1($2, $3):
+    """
+    $4
+    :param $5:$6
+    :return:$7
+    """
+    try:
+        $8
+    except:
+        $9
