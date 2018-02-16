@@ -234,14 +234,11 @@ e.g. Sunday, September 17, 2000."
 ;; http://blog.lojic.com/2009/08/06/send-growl-notifications-from-carbon-emacs-on-osx/
 (defun zilongshanren/growl-notification (title message &optional sticky)
   "Send a Growl notification"
-  (do-applescript
-   (format "tell application \"GrowlHelperApp\" \n
-              notify with name \"Emacs Notification\" title \"%s\" description \"%s\" application name \"Emacs.app\" sticky \"%s\"
-              end tell
-              "
-           title
+  (shell-command
+   (format "node -e \"var growl = require('growl'); growl('%s', {title: '%s', sticky: %s})\""
            message
-           (if sticky "yes" "no"))))
+           title
+           (if sticky "true" "false"))))
 
 (defun zilongshanren/growl-timer (minutes message)
   "Issue a Growl notification after specified minutes"

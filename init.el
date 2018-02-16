@@ -70,6 +70,7 @@ values."
      ;; docker
      ;; latex
      deft
+     imenu-list
      markdown
      (org :variables org-want-todo-bindings t)
      ;; gpu
