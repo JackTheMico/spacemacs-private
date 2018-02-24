@@ -77,7 +77,8 @@ values."
      yaml
      react
      (python :variables
-             python-test-runner '(pytest nose))
+             python-test-runner '(pytest nose)
+             python-enable-yapf-format-on-save t)
      ;; (ruby :variables ruby-version-manager 'chruby)
      ;; ruby-on-rails
      lua
@@ -119,7 +120,7 @@ values."
                     ace-jump-helm-line helm-make magithub
                     helm-themes helm-swoop helm-spacemacs-help smeargle
                     ido-vertical-mode flx-ido company-quickhelp counsel-projectile
-                    window-purpose ivy-purpose helm-purpose spacemacs-purpose-popwin
+                     ivy-purpose helm-purpose spacemacs-purpose-popwin
                     )
    dotspacemacs-install-packages 'used-only
    dotspacemacs-delete-orphan-packages nil))
