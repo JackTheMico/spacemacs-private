@@ -4,8 +4,10 @@
 # group: definitions
 # NOTE: Use minimum indentation, because Emacs 25+ doesn't dedent docstrings.
 # --
-def ${1:name}($2):
- \"\"\"$3
- ${2:$(python-args-to-docstring)}
- \"\"\"
- $0
+def ${1:name}(${2:params}):
+    \"\"\"
+    $3
+    :${2:$(python-args-to-docstring)}$4
+    :return: ${5:None}
+    \"\"\"
+    $0

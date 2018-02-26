@@ -78,15 +78,16 @@ values."
      react
      (python :variables
              python-test-runner '(pytest nose)
-             python-enable-yapf-format-on-save t)
+             )
      ;; (ruby :variables ruby-version-manager 'chruby)
      ;; ruby-on-rails
      lua
      html
-     ;; javascript
+     ;; ja
+     ;; vascript
      ;; (typescript :variables
-                ;; typescript-fmt-on-save nil
-                ;; typescript-fmt-tool 'typescript-formatter)
+     ;; typescript-fmt-on-save nil
+     ;; typescript-fmt-tool 'typescript-formatter)
      emacs-lisp
      (clojure :variables clojure-enable-fancify-symbols t)
      racket

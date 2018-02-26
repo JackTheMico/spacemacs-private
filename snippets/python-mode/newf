@@ -9,17 +9,17 @@
 
 -------------------------------------------------
 
-   File Name:        $1.py
+   File Name:        $1
 
    Description:      $2
 
    Author:           Jack Deng
 
-   Date:             $3
+   Date:             ${3:$(format-time-string "%Y-%m-%d-%H:%M:%S")}
 
    Version:          v1.0
 
-   Lastmodified:     $3 by Jack Deng
+   Lastmodified:     ${4:$3} by Jack Deng
 
 -------------------------------------------------
 
