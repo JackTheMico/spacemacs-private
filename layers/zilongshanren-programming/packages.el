@@ -126,7 +126,7 @@
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
   (setq python-shell-interpreter "/usr/local/bin/ipython3"
-        python-shell-interpreter-args "-i"
+        python-shell-interpreter-args  "-i --simple-prompt"
         )
   )
 
