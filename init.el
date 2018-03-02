@@ -391,6 +391,7 @@ values."
   ;; force horizontal split window
   (setq split-width-threshold 120)
   (linum-relative-on)
+  (setq evil-insert-state-cursor '("green", (bar . 5)))
 
   (spacemacs|add-company-backends :modes text-mode)
 

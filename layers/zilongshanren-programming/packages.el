@@ -125,8 +125,8 @@
 (defun zilongshanren-programming/post-init-python ()
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; if you use pyton3, then you could comment the following line
-  (setq python-shell-interpreter "/usr/local/bin/ipython3"
-        python-shell-interpreter-args "-i"
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i --simple-prompt"
         )
   )
 
@@ -269,7 +269,8 @@
       (setq flycheck-display-errors-delay 0.9)
       (setq flycheck-idle-change-delay 2.0)
       (setq flycheck-python-pylint-executable "/usr/bin/pylint3.6")
-      (setq-default flycheck-checker 'python-pylint)
+      (setq flycheck-flake8-maximum-line-length 150)
+      (setq-default flycheck-checker 'python-flake8)
       )))
 
 (defun zilongshanren-programming/post-init-eldoc ()

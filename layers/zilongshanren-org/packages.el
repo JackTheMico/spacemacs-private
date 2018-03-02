@@ -45,6 +45,9 @@
 
 (defun zilongshanren-org/post-init-org-pomodoro ()
   (progn
+    (setq org-pomodoro-long-break-length 10)
+    (setq org-pomodoro-length 35)
+    (setq org-pomodoro-short-break-length 6)
     (add-hook 'org-pomodoro-finished-hook '(lambda () (zilongshanren/growl-notification "Pomodoro Finished" "☕️ Have a break!" t)))
     (add-hook 'org-pomodoro-short-break-finished-hook '(lambda () (zilongshanren/growl-notification "Short Break" "🐝 Ready to Go?" t)))
     (add-hook 'org-pomodoro-long-break-finished-hook '(lambda () (zilongshanren/growl-notification "Long Break" " 💪 Ready to Go?" t)))
