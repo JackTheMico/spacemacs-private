@@ -238,7 +238,8 @@ e.g. Sunday, September 17, 2000."
    (format "node -e \"var growl = require('growl'); growl('%s', {title: '%s', sticky: %s})\""
            message
            title
-           (if sticky "true" "false"))))
+           (if sticky "true" "false")))
+  (if (string= "Ready to Go?" message) (org-pomodoro)))
 
 (defun zilongshanren/growl-timer (minutes message)
   "Issue a Growl notification after specified minutes"
