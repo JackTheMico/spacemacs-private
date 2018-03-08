@@ -160,7 +160,7 @@
 (spacemacs/set-leader-keys "ols" 'zilongshanren/save-my-layout)
 (spacemacs/set-leader-keys "ob" 'popwin:display-last-buffer)
 (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
-(spacemacs/set-leader-keys "os" 'youdao-dictionary-search)
+(spacemacs/set-leader-keys "oi" 'youdao-dictionary-search-from-input)
 (spacemacs/set-leader-keys "bM" 'spacemacs/switch-to-messages-buffer)
 
 (bind-key* "s-p" 'find-file-in-project)

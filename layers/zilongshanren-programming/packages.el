@@ -269,7 +269,7 @@
       (setq flycheck-display-errors-delay 0.9)
       (setq flycheck-idle-change-delay 2.0)
       (setq flycheck-python-pylint-executable "/usr/bin/pylint3.6")
-      (setq flycheck-flake8-maximum-line-length 150)
+      (setq flycheck-flake8-maximum-line-length 80)
       (setq-default flycheck-checker 'python-flake8)
       )))
 
