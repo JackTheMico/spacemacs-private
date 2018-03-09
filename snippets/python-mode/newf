@@ -6,21 +6,20 @@
 
 # -*- coding:utf-8 -*-
 """
+-------------------------------------------------
+    Copyright:        2018, BBD Tech.Co.Ltd
+
+    File Name:        $1
+
+    Description:      $2
+
+    Author:           dengliangwen@bbdservice.com
+
+    Date:             ${3:$(format-time-string "%Y-%m-%d-%H:%M:%S")}
+
+    Version:          v1.0
+
+    Lastmodified:     ${4:$3} by Jack Deng
 
 -------------------------------------------------
-
-   File Name:        $1
-
-   Description:      $2
-
-   Author:           Jack Deng
-
-   Date:             ${3:$(format-time-string "%Y-%m-%d-%H:%M:%S")}
-
-   Version:          v1.0
-
-   Lastmodified:     ${4:$3} by Jack Deng
-
--------------------------------------------------
-
 """
