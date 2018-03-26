@@ -47,7 +47,7 @@
   (progn
     (setq org-pomodoro-long-break-length 5)
     (setq org-pomodoro-length 30)
-    (setq org-pomodoro-short-break-length 3)
+    (setq org-pomodoro-short-break-length 4)
     (add-hook 'org-pomodoro-finished-hook '(lambda () (zilongshanren/growl-notification "Pomodoro Finished" "☕️ Have a break!" t)))
     (add-hook 'org-pomodoro-short-break-finished-hook '(lambda () (zilongshanren/growl-notification "Short Break" "Ready to Go?" t)))
     (add-hook 'org-pomodoro-long-break-finished-hook '(lambda () (zilongshanren/growl-notification "Long Break" "Ready to Go?" t)))
